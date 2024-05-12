@@ -5,8 +5,9 @@ import './App.css';
 function App() {
   const [name,setName] = useState({firstName:'',lastName:''})
   const [showName,setShowName] = useState(false);
+  
   const handleSubmit = (e) => {
-    e.preventDefault()
+    
     if(name.firstName && name.lastName)
     setShowName(true)
   }
@@ -19,11 +20,11 @@ function App() {
     }
    })
   }
-  
-  
+
+
   return (
     <div className="App">
-      <form onSubmit={e => handleSubmit(e)}>
+      <form onSubmit={e => handleSubmit(e)} >
         <h1>Full Name Display</h1>
         <label>First Name:</label><input type='text' name='firstName' required onChange={e => handleName(e)}/> <br/>
         <label>Last Name:</label><input type='text' name='lastName' required onChange={e => handleName(e)}/> <br />
