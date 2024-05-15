@@ -35,7 +35,7 @@ function App() {
       </form>
       {showName && (
         <p>
-          Full Name : {name.firstName} {name.lastName}
+          Full Name: {name.firstName} {name.lastName}
         </p>
       )}
     </div>
